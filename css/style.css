@@ -27,59 +27,97 @@ color-cuarto: #11ff88;
     color: rgb(209, 18, 18);
     border: 5px solid black;
     padding: 1%;
-    padding-right: 3em;
-}
-.caja1{
-    font-size: 30%;
-    background-color: rgba(16, 83, 80, 0.37);
-    width: 50%;
-    height: 90vh;
     margin: auto;
+    background-color: rgb(13, 109, 13);
+    }
+.caja1{
+    font-size: 90%;
+    background-color: rgba(179, 212, 29, 0.966);
+    width: 70%;
+    height: 70vh;
     }
 .caja2{
     font-size: 30%;
-    background-color: rgba(83, 16, 47, 0.37);
-    width: 70%;
-    height: 90vh;
-    margin: auto;
+    background-color: rgba(13, 121, 18, 0.788);
+    width: 50%;
+    height: 50vh;
     margin-top: 10px;
     }
 .caja3{
     font-size: 30%;
-    background-color: rgba(141, 143, 32, 0.37);
+    background-color: rgba(216, 35, 29, 0.925);
     width: 30%;
-    height: 90vh;
-    margin: auto;
+    height: 30vh;
     }
 .caja4{
-    font-size: 30%;
-    background-color: rgba(209, 31, 55, 0.37);
+    font-size: 15%;
+    background-color: rgba(65, 23, 216, 0.87);
     width: 20%;
-    height: 90vh;
-    margin: auto;
+    height: 20vh;
     }
 body{
-    background-color: rgba(77, 134, 10, 0.733);
+    background-color: rgba(175, 161, 194, 0.733);
+    background-image: url(../img/fondo.jpg);
+    background-size: cover;
+}
+.formularios{
+    width: 16%;
+}
+.footer{
+    display: flex;
+    padding: 1em;
+    flex-basis: 50%;
+}
+.contenedor{
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    min-height: 100vh;
 }
 .elemento-padre{
 list-style-type: none;
-padding: 0%;
+padding: 0;
+display: flex;
+flex-wrap: wrap;
+justify-content: space-around;
 border: 5px salmon blue
 }
+
 .elemento-padre li{
-border: 1px;
-padding: 5px;
-display: flex;
-flex-direction: column;
+padding: 1em;
+border: 1px solid black
 }
 .elemento1{
-background-color: rebeccapurple;
+background-color: white;
 color: rgb(151, 69, 11);
-flex-grow: 3;
+flex-basis: 50%;
 }
 .elemento2{
-background-color: burlywood;
+background-color: white;
 color: cadetblue;
-flex-basis: 10%;
-flex-shrink: inherit;
+flex-basis: 50%;
+}
+.elemento3{
+    background-color: white;
+    color: rgb(223, 135, 21);
+    flex-basis: 50%;
+    }
+.elemento4{
+    background-color: white;
+    color: rgb(223, 21, 21);
+    flex-basis: 50%;
+}
+.elemento5{
+    background-color: white;
+    color: rgb(24, 21, 223);
+    flex-basis: 50%;
+}
+.elemento6{
+    background-color: white;
+    color: rgb(209, 14, 128);
+    flex-basis: 50%;
+}
+@media (min-width: 992px){
+    .elemento-padre .elemento2{
+        background-color: red;
+    }
 }
