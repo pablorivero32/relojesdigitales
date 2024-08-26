@@ -1,0 +1,50 @@
+.nav{
+    background-color: rgb(87, 15, 155);
+}
+.article{
+    background-color: rgb(211, 160, 32);
+    color: rgb(2, 2, 26);
+    border: 5px solid black;
+    border-radius: 5px;
+    transition: 2000ms;
+    transition-property: background-color;
+}
+.article:hover{
+background-color: aqua;
+cursor: pointer;
+color: blue;
+border: 5px dashed rgb(23, 136, 23);
+box-shadow: 1px 2px 3px 10px rgb(80, 67, 67);
+opacity: 1;
+scale: 1.1;
+}
+
+.footer{
+    background-color: crimson;
+}
+.section{
+display: grid;
+grid-template-columns: 1fr 1fr;
+gap: 10px;
+}
+h2, p{
+    display: flex;
+    justify-content: center;
+}
+.div{
+    background-color: red;
+    border: 1px solid black;
+    width: 200px;
+    margin: 20px;
+}
+.div{
+    animation: div 2s linear infinite;  
+}
+@keyframes div{
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}
