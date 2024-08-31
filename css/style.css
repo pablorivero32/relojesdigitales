@@ -1,123 +1,386 @@
-/*
-color-primario: #99ff00;
-color-secundario: #46453a;
-color-terciario: #8123de;
-color-cuarto: #11ff88;
-*/
-.titulo1{
-    color:red;
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
-.titulo2{
-    color: rgb(101, 32, 165);
-    font-size: 50px;
-    background-color: rgb(81, 129, 173);
+.main-content {
+    margin: 0 auto; /* Centro el contenedor principal */
+    padding: 20px;
+    width: 100%;
+    max-width: 1200px;
+    text-align: center; /* Centra el contenido del texto */
 }
-.titulo3{
-    color: rgb(197, 36, 15);
-    font-size: 55px;
-    font-family: 'Courier New', Courier, monospace;
-}
-.titulo4{
-    color: rgb(177, 177, 33);
-}
-.descripcion{
-    color:rgb(5, 5, 56);
-}
-.contenedor-texto{
-    color: rgb(209, 18, 18);
-    border: 5px solid black;
-    padding: 1%;
-    margin: auto;
-    background-color: rgb(13, 109, 13);
-    }
-.caja1{
-    font-size: 90%;
-    background-color: rgba(179, 212, 29, 0.966);
-    width: 70%;
-    height: 70vh;
-    }
-.caja2{
-    font-size: 30%;
-    background-color: rgba(13, 121, 18, 0.788);
-    width: 50%;
-    height: 50vh;
-    margin-top: 10px;
-    }
-.caja3{
-    font-size: 30%;
-    background-color: rgba(216, 35, 29, 0.925);
-    width: 30%;
-    height: 30vh;
-    }
-.caja4{
-    font-size: 15%;
-    background-color: rgba(65, 23, 216, 0.87);
-    width: 20%;
-    height: 20vh;
-    }
-body{
-    background-color: rgba(175, 161, 194, 0.733);
-    background-image: url(../img/fondo.jpg);
-    background-size: cover;
-}
-.formularios{
-    width: 16%;
-}
-.footer{
+.title{
     display: flex;
-    padding: 1em;
-    flex-basis: 50%;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    font-size: 36px;
+    font-family: sans-serif;
+    margin:auto;
+    padding: 10px;
 }
-.contenedor{
-    display: grid;
-    grid-template-rows: auto 1fr auto;
-    min-height: 100vh;
+.description{
+    margin: 10px auto;
+    padding: 10px;
+    font-size: 20px;
+    font-family: sans-serif;
+    color: rgb(58, 53, 53);
+    text-align: left;
+    line-height: 1.5;
+    max-width: 950px;
 }
-.elemento-padre{
-list-style-type: none;
-padding: 0;
-display: flex;
-flex-wrap: wrap;
-justify-content: space-around;
-border: 5px salmon blue
+.main-content.page-container{
+    padding: 20px;
+    width: 100%;
+    max-width: 1200px;
 }
-
-.elemento-padre li{
-padding: 1em;
-border: 1px solid black
+.intro{
+    margin-bottom: 20px;
 }
-.elemento1{
-background-color: white;
-color: rgb(151, 69, 11);
-flex-basis: 50%;
+.subheading{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    font-size: 28px;
+    font-family: sans-serif;
+    margin:auto;
+    padding: 10px;
 }
-.elemento2{
-background-color: white;
-color: cadetblue;
-flex-basis: 50%;
+.subheading-description {
+    margin: 10px auto;
+    padding: 10px;
+    font-size: 18px;
+    font-family: sans-serif;
+    color: rgb(58, 53, 53);
+    text-align: left;
+    line-height: 1.5;
+    max-width: 950px;
 }
-.elemento3{
+.header{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 5px 0;
     background-color: white;
-    color: rgb(223, 135, 21);
-    flex-basis: 50%;
-    }
-.elemento4{
-    background-color: white;
-    color: rgb(223, 21, 21);
-    flex-basis: 50%;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    width: 100%;
 }
-.elemento5{
-    background-color: white;
-    color: rgb(24, 21, 223);
-    flex-basis: 50%;
-}
-.elemento6{
-    background-color: white;
-    color: rgb(209, 14, 128);
-    flex-basis: 50%;
+.header a img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 5px;
 }
 @media (min-width: 992px){
-    .elemento-padre .elemento2{
-        background-color: red;
+.header{
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
     }
+}
+.navigation{
+        width: 100%;
+        max-width: 1200px;
+        margin: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: white;
+        z-index: 1000;
+        border: 1px solid rgb(155, 130, 130);
+}
+.navigation ul{
+        list-style: none;
+}
+.menu {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+.menu > li{
+    position: relative;
+    display: inline-block;
+    min-width: 100px;
+    align-items: center;
+}
+.menu > li > a{
+    display: block;
+    padding: 15px 20px;
+    color: black;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.1s, color 0.1s;
+}
+.menu li a:hover{
+    background-color: silver;
+    color: black;
+}
+.submenu{
+    display: none;
+    list-style: none;
+    position: absolute; 
+    background-color: white;
+    border: 1px solid rgb(70, 67, 67);
+    top: 100%;
+    left: 0;
+    width: 100%; /* Asegura que el submenú se alinee con el menú */
+    z-index: 10; /* Asegura que el submenú se muestre sobre otros elementos */
+    padding: 0;
+    margin: 0;
+}
+.submenu li a{
+    display: block;
+    padding: 10px 20px;
+    color: black;
+    font-weight: bold;
+    text-decoration: none;
+}
+.menu li:hover .submenu{
+    display: block;
+    border: solid rgb(70, 67, 67) 1px;
+    align-items: center;
+    padding: 0;
+}
+.menu-icon {
+    display: none; /* Oculto por defecto en pantallas grandes */
+    font-size: 24px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+    margin: 10px;
+}
+/* Botón de menú en pantallas pequeñas */
+@media (max-width: 768px) {
+    .menu-icon {
+        display: block; /* Muestra el botón en pantallas pequeñas */
+        cursor: pointer; /* Cambia el cursor para indicar que es clickeable */
+    }
+    .navigation {
+        display: none; /* Oculta la navegación en pantallas pequeñas por defecto */
+    }
+    .menu.active {
+        display: block; /* Muestra el menú cuando tiene la clase active */
+    }
+    .menu > li > .submenu {
+        display: none; /* Oculta los submenús en pantallas pequeñas */
+    }
+    .menu > li.active > .submenu {
+        display: block; /* Muestra el submenú del ítem activo */
+    }
+}
+
+/* Ocultar el checkbox por defecto */
+.menu-toggle {
+    display: none;
+}
+/* Cambiar la visibilidad del menú cuando el checkbox está marcado */
+.menu-toggle:checked + .navigation {
+    display: block;
+}
+.menu-icon {
+    display: none; /* Oculto por defecto en pantallas grandes */
+    font-size: 24px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+    margin: 10px;
+}
+/* Botón de menú en pantallas pequeñas */
+@media (max-width: 768px) {
+    .menu-toggle:checked + .menu-icon + .navigation {
+        display: block; /* Muestra el menú cuando el checkbox está marcado */
+    }
+    .menu-icon {
+        display: block; /* Muestra el botón en pantallas pequeñas */
+        cursor: pointer;
+    }
+    .navigation {
+        display: none; /* Oculta la navegación en pantallas pequeñas por defecto */
+        position: fixed; /* Fija el menú en la pantalla */
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: #fff; /* Ajusta el color de fondo según sea necesario */
+        z-index: 1000; /* Asegúrate de que el menú esté por encima de otros elementos */
+        overflow-y: auto; /* Permite el desplazamiento si el menú es más largo que la pantalla */
+        padding: 0; /* Asegúrate de que no haya relleno innecesario */
+    }
+    .menu > li > a {
+        padding: 15px; /* Ajusta el padding para pantallas pequeñas */
+        text-align: left; /* Alinea el texto a la izquierda */
+    }
+    .submenu {
+        display: none; /* Oculta los submenús en pantallas pequeñas */
+    }
+    .menu-toggle:checked + .menu-icon + .navigation .menu > li.active > .submenu {
+        display: block; /* Muestra el submenú del ítem activo */
+    }
+}
+/* Navegación para pantallas grandes */
+@media (min-width: 769px) {
+    .menu-icon {
+        display: none; /* Oculta el botón en pantallas grandes */
+    }
+    .navigation {
+        display: flex; /* Muestra la navegación en pantallas grandes */
+    }
+}
+.gallery{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+.gallery-item{
+    display: flex;
+    justify-content: center;
+    align-items: center; /* Alinea el contenido verticalmente */
+    flex-direction: row; /* Dirección de los elementos en fila */
+    max-width: 270px;
+    text-align: center;
+    margin-bottom: 20px;
+    box-sizing: border-box;
+    overflow: hidden;
+    background-color: #fff;
+}
+.gallery-item img{
+    max-width: 150%; /* Asegura que la imagen no exceda el contenedor */
+    height: auto; /* Mantén la proporción de la imagen */
+    margin: 0 auto; /* Centra la imagen horizontalmente */
+    display: block; /* Asegura que el margen automático funcione */
+    transition: transform 0.3s; /* Mantén la transición para el hover */
+}
+.gallery-item img:hover{
+    transform: scale(1.05);
+}
+.gallery-item p{
+    margin-top: 10px;
+    font-size: 14px;
+}
+.card {
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    position: relative;
+}
+.card:hover {
+    transform: scale(1.03);
+}
+.card img {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: cover; /* Mantiene el aspecto de la imagen sin estirarla */
+}
+.card-content {
+    padding: 5px 10px; /* Menos espacio arriba y abajo */
+    display: flex;
+    justify-content: space-between; /* Espacio distribuido entre el contenido */
+    align-items: flex-start; /* Alinea verticalmente al inicio */
+    border-top: 2px solid #000; /* Línea negra debajo de la imagen */
+    margin-top: 5px; /* Añade espacio entre la imagen y la línea */
+}
+.item-description{
+    margin: 0;
+    font-size: 18px;
+    font-weight: bold;
+    color: #333;
+    display: -webkit-box; /* Necesario para el line-clamp */
+    line-clamp: 3;
+    -webkit-line-clamp: 3; /* Muestra un máximo de 3 líneas */
+    -webkit-box-orient: vertical; /* Necesario para el line-clamp */
+    overflow: hidden; /* Oculta el desbordamiento */
+    text-overflow: ellipsis; /* Muestra puntos suspensivos si el texto es demasiado largo */
+    text-align: left;
+    flex: 1; /* Permite que la descripción ocupe el espacio restante */
+    padding-top: 5px; /* Menos espacio entre la descripción y la línea */
+    text-decoration: underline; /* Subraya el texto */
+}
+.price {
+    font-size: 20px;
+    font-weight: bold;
+    color: white; /* Texto blanco */
+    background-color: black; /* Fondo negro */
+    padding: 10px 20px;
+    text-align: center;
+}
+.sale-badge {
+    position: absolute;
+    top: 10px; /* Ajusta según tu diseño */
+    right: 1px; /* Ajusta según tu diseño */
+    background-color: rgba(25, 109, 25, 0.822);
+    color: white;
+    padding: 5px 10px;
+    font-size: 14px;
+    border: 5px;
+}
+@media (max-width: 768px) {
+    .gallery-item {
+        flex: 1 1 100%; /* Asegura que cada elemento de la galería ocupe toda la fila en pantallas pequeñas */
+        min-width: auto;
+    }
+}
+.footer{
+    background-color: #222;
+    padding: 20px;
+    text-align: center;
+}
+.footer-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+.footer-text {
+    margin: 10px 0;
+    font-size: 14px;
+    color: silver;
+}
+.social-icons a {
+    display: inline-block; /* Asegura que los iconos se alineen en una línea */
+}
+.social-icons img {
+    width: 30px; /* Ajusta el tamaño según sea necesario */
+    height: 30px; /* Ajusta el tamaño según sea necesario */
+    transition: transform 0.3s;
+}
+.social-icons img:hover {
+    transform: scale(1.2); /* Aumenta el tamaño al pasar el ratón */
+}
+
+.chevron-icon {
+    width: 10px; /* Ajusta el tamaño de la imagen del chevron */
+    height: auto;
+    color: black;
+    margin-left: 5px; /* Espacio entre el texto y la imagen */
+    vertical-align: middle; /* Alinea verticalmente la imagen con el texto */
+}
+.menu > li:hover > a .chevron-icon {
+    /* transform: rotate(180deg);  */
+    /* Rota la imagen cuando se activa el menú */
+    transition: transform 0.3s ease; /* Añade una transición suave */
+}
+
+@media (max-width: 768px) {
+    .chevron-icon {
+        display: none; /* Oculta el chevron en pantallas pequeñas */
+    }
+}
+@media print {
+    .header {
+        position: static; /* Cambiar a estático para impresión */
+        top: auto; /* Elimina la posición fija */
+    }
+
+    /* Otros estilos de impresión que necesites */
 }
